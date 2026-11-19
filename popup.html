@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SkipTube</title><link rel="stylesheet" href="popup.css"></head><body><main class="shell">
+<header><div class="brand"><span class="logo">▶</span><div><strong>SkipTube</strong><small>YouTube, uninterrupted.</small></div></div><label id="master-control" class="switch master" hidden><input id="enabled" type="checkbox"><span></span></label></header>
+<section id="consent" class="consent" hidden><h2>Before you continue</h2><p>To find community-submitted segments, SkipTube sends the current YouTube video ID and your enabled categories to SponsorBlock. SponsorBlock receives that request and ordinary network information such as your IP address. SkipTube stores preferences and cached segments in your browser; it has no server.</p><p>SkipTube uses this information only to retrieve and skip the segments you choose. A segment is sent to SponsorBlock only if you review and confirm a public submission.</p><button id="agree" class="secondary consent-button">Agree and continue</button></section>
+<div id="controls" hidden>
+<section class="status"><span class="pulse"></span><div><strong id="video-state">Checking YouTube…</strong><small id="video-detail">Open a video to see segment data</small></div></section>
+<section class="stats"><div><strong id="skipped">0</strong><span>segments skipped</span></div><div><strong id="saved">0m</strong><span>time saved</span></div></section>
+<section class="categories"><div class="section-title">AUTO-SKIP CATEGORIES</div><div id="category-list"></div></section>
+<footer><button id="settings" class="secondary">⚙ Settings</button><a id="github" target="_blank" rel="noreferrer" hidden>GitHub ↗</a></footer>
+</div>
+</main><script type="module" src="popup.js"></script></body></html>

@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible SkipTube problem
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include account details, private video history, local user IDs, or credentials. A video ID is optional; include it only if you are comfortable sharing it publicly."
+  - type: input
+    id: version
+    attributes:
+      label: SkipTube version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: "Chrome 000 or Brave 000"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps, including the YouTube navigation or popup actions involved.
+      placeholder: "1. Open a video..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Optional diagnostics
+      description: If enabled, paste only relevant SkipTube debug lines after removing any identifying details.
+    validations:
+      required: false

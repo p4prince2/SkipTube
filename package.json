@@ -1,0 +1,12 @@
+{
+  "name": "skiptube-extension",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "check": "node scripts/check-extension.js && node scripts/check-site.js",
+    "package": "node scripts/package-extension.js",
+    "check:package": "node scripts/validate-package.js"
+  }
+}
