@@ -29,6 +29,6 @@ for (const page of pages) {
 const css = fs.readFileSync(path.join(siteRoot, 'site.css'), 'utf8');
 if (!/@media\s*\(max-width:/.test(css) || !/prefers-reduced-motion/.test(css)) throw new Error('Responsive or reduced-motion website styles are missing.');
 const config = fs.readFileSync(path.join(siteRoot, 'site-config.js'), 'utf8');
-if (!/repositoryUrl:\s*''/.test(config) || !/chromeWebStoreUrl:\s*''/.test(config)) throw new Error('Prepublication GitHub and store links should remain unconfigured.');
+if (!/repositoryUrl:\s*'https:\/\/github\.com\/p4prince2\/SkipTube'/.test(config) || !/chromeWebStoreUrl:\s*''/.test(config)) throw new Error('Repository link should be configured; store link must remain disabled until publication.');
 if (/<a\b[^>]*data-store-link[^>]*>/.test(fs.readFileSync(path.join(siteRoot, 'index.html'), 'utf8'))) throw new Error('Do not enable a store install button before publication.');
-console.log(`Website links and local resources validated across ${pages.length} pages; repository/store links remain disabled.`);
+console.log(`Website links and local resources validated across ${pages.length} pages; repository links are enabled and store links remain disabled.`);

@@ -1,23 +1,15 @@
-# GitHub repository and Pages deployment
+# GitHub Pages deployment
 
-No repository or Pages URL is configured in this workspace. Do not use placeholders as live links. After the owner creates the repository:
+The public source repository is available at <https://github.com/p4prince2/SkipTube>. The initial source commit is published on `main`. GitHub Pages has **not** been enabled; the public website URL remains pending until deployment is completed and verified.
 
-## Create and publish the repository
-
-1. Create a new **public** GitHub repository named **SkipTube** under the chosen owner/account. Use the description and topic list in [GITHUB_SETUP.md](GITHUB_SETUP.md). Do not generate a second README, license, or `.gitignore`; those are already prepared locally.
-2. Review the license/copyright holder and confirm contributor rights.
-3. Add the actual repository URL as `origin`, choose the default branch (normally `main`), and push the approved local source. This workspace has no commits yet; stage and commit locally before pushing.
-4. Configure GitHub private vulnerability reporting or document another private security contact. The public launch checklist remains blocked until a reporting route exists.
-5. In `docs/site-config.js`, set `repositoryUrl` to the real public repository URL. Keep `chromeWebStoreUrl` empty until the listing is published; then set its real URL.
-6. In popup.js set the same real repository URL so the extension popup GitHub link appears. It is intentionally hidden until then.
-
-## Enable free GitHub Pages
+## Enable Pages after approval
 
 1. In the repository, open **Settings → Pages**.
 2. Select **Deploy from a branch**.
-3. Choose the default branch and `/docs`, then save.
-4. Wait for the Pages deployment workflow to finish. Use the site URL GitHub displays; project URLs follow `https://<owner>.github.io/<repository>/` and account sites use `https://<owner>.github.io/`.
-5. Confirm `https://` works for the homepage, relative stylesheet/script/icon paths, and `privacy.html`.
-6. Configure the published Pages URL as the Chrome Web Store homepage and privacy policy URL after verifying it.
+3. Choose `main` and `/docs`, then save. This publishes the website; do this only after owner approval.
+4. Wait for the deployment to finish and use the URL GitHub displays. Do not represent an assumed URL as live.
+5. Check the homepage and `privacy.html` over HTTPS, including relative stylesheet, script, and favicon paths.
+6. Confirm the GitHub source and issue links resolve correctly and that store installation remains unavailable until the Chrome Web Store listing is published.
+7. After deployment, use the verified Pages URL for the repository website and store homepage/privacy-policy fields.
 
-The static site uses no backend, build tool, custom domain, or external font/CDN. GitHub Pages supports branch-and-folder publishing from `/docs`; see [GitHub's official publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). GitHub's free plan includes Pages for public repositories. Hosting has no recurring infrastructure charge under this plan; GitHub may log ordinary website request metadata under its own privacy practices.
+The repository URL is already configured in `docs/site-config.js` and the extension popup. `chromeWebStoreUrl` remains empty until the store listing is published. No backend, build tool, custom domain, or external font/CDN is needed. GitHub Pages can publish from `/docs`; see [GitHub's publishing-source instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). Free hosting for a public repository has no recurring infrastructure charge. GitHub may process ordinary website request metadata under its own privacy practices.

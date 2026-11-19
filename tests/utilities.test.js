@@ -5,6 +5,7 @@ import { formatTime, isWhitelisted, normalizeSegments, shouldSkipAtTime } from '
 import { DEFAULTS, getSettings, mergeVideoState, saveSettings } from '../utils/storage.js';
 import { mayRequestSegments, settingsFingerprint, shouldReloadVideo, stateForVideo } from '../utils/lifecycle.js';
 import { parseSegmentsResponse, submitSegment } from '../api/sponsorblock.js';
+import { configureRepositoryLink } from '../utils/repository-link.js';
 
 test('videoIdFromUrl accepts YouTube watch and short links only', () => {
   assert.equal(videoIdFromUrl('https://www.youtube.com/watch?v=abcdefghijk'), 'abcdefghijk');
@@ -17,6 +18,14 @@ test('channel IDs normalize YouTube handles and channel paths', () => {
   assert.equal(normalizeChannelId('/@creator'), '@creator');
   assert.equal(normalizeChannelId('https://www.youtube.com/channel/UC123'), 'channel/UC123');
   assert.equal(normalizeChannelId('/watch?v=abcdefghijk'), '');
+});
+
+test('popup repository link becomes visible and points to the public repository', () => {
+  const link = { href: '', hidden: true };
+  assert.equal(configureRepositoryLink(link, 'https://github.com/p4prince2/SkipTube'), true);
+  assert.equal(link.href, 'https://github.com/p4prince2/SkipTube');
+  assert.equal(link.hidden, false);
+  assert.equal(configureRepositoryLink(link, ''), false);
 });
 
 test('SponsorBlock requests require persisted in-product data consent', async () => {

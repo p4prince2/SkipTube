@@ -1,7 +1,8 @@
 import { CATEGORIES, getSettings, mergeVideoState, saveSettings } from './utils/storage.js';
+import { configureRepositoryLink } from './utils/repository-link.js';
 const $ = selector => document.querySelector(selector);
 const enabled = $('#enabled');
-const REPOSITORY_URL = '';
+const REPOSITORY_URL = 'https://github.com/p4prince2/SkipTube';
 
 async function render() {
   const settings = await getSettings(); enabled.checked = settings.enabled;
@@ -48,5 +49,5 @@ async function renderTabState() {
 }
 renderTabState();
 render();
-if (REPOSITORY_URL) { $('#github').href = REPOSITORY_URL; $('#github').hidden = false; }
+configureRepositoryLink($('#github'), REPOSITORY_URL);
 chrome.storage.onChanged.addListener(() => { render(); renderTabState(); });

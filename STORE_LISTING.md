@@ -69,7 +69,8 @@ The listing and this project's [Privacy Policy](docs/privacy.html) must remain c
 
 - [ ] Confirm license/copyright holder and contributor rights.
 - [ ] Confirm provenance/redistribution rights for bundled icons listed in `THIRD_PARTY_NOTICES.md`.
-- [ ] Create public GitHub repository and configure repository, support, homepage, and privacy URLs.
+- [x] Create the public GitHub repository and publish the source on `main`.
+- [ ] Configure repository metadata, support route, and verified website/privacy URLs after Pages deployment.
 - [ ] Enable a private vulnerability-reporting path before launch.
 - [ ] Complete live Chrome and Brave QA using `README.md`.
 - [ ] Capture at least one genuine 1280×800 screenshot after QA.
@@ -80,13 +81,13 @@ The listing and this project's [Privacy Policy](docs/privacy.html) must remain c
 - [ ] Complete data use declarations based on actual behavior and the current Dashboard categories.
 - [ ] Register a Chrome Web Store developer account. Google currently documents a one-time registration fee; the dashboard shows the amount and required terms for the account's region.
 - [ ] Review the Developer Agreement, choose distribution regions, and submit only after owner approval.
-- [ ] After approval, set the real Chrome Web Store URL in `docs/site-config.js` and website installation instructions.
+- [ ] After Chrome Web Store publication, set the real store URL in `docs/site-config.js` and website installation instructions.
 
 ## Submission sequence
 
 1. In the Chrome Web Store Developer Dashboard, create a new item and upload `dist/SkipTube-1.0.0.zip`.
 2. Enter the title, short and detailed descriptions, category, language, screenshots, and any selected promotional images.
-3. Configure the actual homepage, support, and public privacy-policy URLs. Replace every `<owner>` placeholder only after the repository and Pages site exist and have been verified.
+3. Configure the homepage and privacy-policy URL only after GitHub Pages is enabled and the actual deployed URL has been verified. Configure a support URL only after its route is available.
 4. Complete the current privacy/data-use fields and permission justifications from this document, reconciling each answer with the packaged code and live first-use disclosure.
 5. Set distribution regions and visibility, save the draft, inspect the store preview, and submit for review only after the publisher approves the final disclosure and assets.
 6. After approval, configure the real store URL in `docs/site-config.js`; rebuild only if extension files changed, then verify Chrome and Brave installation from the listing.

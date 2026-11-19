@@ -6,7 +6,7 @@ SkipTube is a lightweight, privacy-conscious YouTube segment skipping extension 
 
 Created by Prince Kushwaha.
 
-> Release status: release candidate prepared locally. No public repository or Chrome Web Store listing URL is configured yet. Live Chrome and Brave release-candidate tests and real screenshots remain outstanding.
+> Publication status: source code is publicly available in the [GitHub repository](https://github.com/p4prince2/SkipTube). The Chrome Web Store listing is pending. Live Chrome and Brave release-candidate tests and genuine product screenshots remain outstanding.
 
 ## Features
 
@@ -24,15 +24,18 @@ SponsorBlock is community-driven. SkipTube cannot detect a segment that has not 
 
 The extension targets Chrome Manifest V3 and is intended for Chrome and Chromium-based Brave. The source has not yet passed live Chrome or Brave release-candidate testing. See the manual test checklist below before public distribution.
 
-## Install for local testing
+## Install from the public source
 
-1. Download or clone this repository after its public URL has been configured.
-2. Open `chrome://extensions` in Chrome or `brave://extensions` in Brave.
-3. Enable **Developer mode**.
-4. Choose **Load unpacked** and select the project directory containing `manifest.json`.
-5. Open a YouTube video and pin SkipTube from the extensions menu.
+The source code is publicly available at [github.com/p4prince2/SkipTube](https://github.com/p4prince2/SkipTube). The Chrome Web Store listing has not been published yet.
 
-After editing extension files, reload SkipTube on the extensions page. Existing pages may need a refresh to load updated extension code. The Chrome Web Store installation link will be added only after the item is published.
+1. Clone the repository with `git clone https://github.com/p4prince2/SkipTube.git`, or download its source archive.
+2. Open the cloned/extracted project folder.
+3. Open `chrome://extensions` in Chrome or `brave://extensions` in Brave.
+4. Enable **Developer mode**.
+5. Choose **Load unpacked** and select the project directory containing `manifest.json`.
+6. Open a YouTube video and pin SkipTube from the extensions menu.
+
+After editing extension files, reload SkipTube on the extensions page. Existing pages may need a refresh to load updated extension code. Chrome Web Store installation will be available only after the listing is published.
 
 ## Configure
 

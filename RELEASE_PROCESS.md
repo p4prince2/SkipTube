@@ -15,4 +15,4 @@ SkipTube uses Semantic Versioning: `MAJOR.MINOR.PATCH`.
 5. Capture real store screenshots and verify all support, repository, privacy, and store URLs.
 6. Publish only after project owner approval. Never include credentials, source maps, test fixtures with personal data, or development files in the extension package.
 
-This workspace is currently prepared as version 1.0.0 but has not been published or tagged.
+Version 1.0.0 source is published on GitHub in commit `71f454b34d87b2c676b8f95c09680816c190ac8c`. The release has not been tagged or published to the Chrome Web Store; complete browser QA and owner approval before creating a release tag.

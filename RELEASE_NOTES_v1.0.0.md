@@ -13,7 +13,7 @@ Initial public release candidate for Chrome Manifest V3 and Chromium-based Brave
 
 ## Release status
 
-Prepared locally. This release has not been published to GitHub or the Chrome Web Store. Browser QA, real product screenshots, security reporting route setup, and verification of bundled asset ownership remain outstanding.
+The source code is published on GitHub at <https://github.com/p4prince2/SkipTube> on `main` (initial source commit `71f454b34d87b2c676b8f95c09680816c190ac8c`). The Chrome Web Store listing is not published. Live browser QA, real product screenshots, private security-reporting setup, and confirmation of asset/contributor rights remain outstanding.
 
 ## Validation
 
